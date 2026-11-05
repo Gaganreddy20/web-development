@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - GaganReddy</title>
+    <meta name="description" content="Portfolio of Your Name, full-stack developer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&family=Mrs+Saint+Delafield&display=swap"
+        rel="stylesheet">
+    <script>
+    document.documentElement.classList.add('js')
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const intro = document.getElementById("welcome-intro");
+
+    if (!intro) return;
+
+    const sessionKey = "gaganPortfolioIntroShown";
+
+    try {
+        if (sessionStorage.getItem(sessionKey)) {
+            intro.remove();
+            return;
+        }
+
+        sessionStorage.setItem(sessionKey, "true");
+    } catch (error) {
+
+    }
+
+window.setTimeout(() => {
+    intro.classList.add("intro-exit");
+
+    window.setTimeout(() => {
+        intro.remove();
+    }, 1500);
+}, 2600);
+
+});
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="welcome-intro" aria-label="Welcome to Gagan Reddy's portfolio">
+    <div class="intro-content">
+        <p class="intro-eyebrow">PERSONAL PORTFOLIO</p>
+
+        <h1 class="intro-name">
+
+            GAGAN <span>REDDY</span>
+        </h1>
+
+        <!-- <p class="intro-role">
+            FULL-STACK DEVELOPER <span>·</span> PROBLEM SOLVER
+        </p> -->
+
+        <div class="intro-loader">
+            <div class="intro-progress"></div>
+        </div>
+
+        <p class="intro-status">INITIALIZING EXPERIENCE...</p>
+    </div>
+</div>
+
+
+<button class="progress-wrap cursor-pointer" id="scrollTopBtn"
+        type="button" aria-label="Scroll to top">
+  <!-- <i class="ri-arrow-up-line" aria-hidden="true"></i> -->
+   <span class="scroll-arrow" aria-hidden="true">↑</span>
+
+  <svg class="progress-circle svg-content" viewBox="-1 -1 102 102"
+       aria-hidden="true">
+    <path
+      id="progressPath"
+      d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="3"
+    ></path>
+  </svg>
+</button>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="6" />
+            <path d="M20 20l-4.5-4.5" />
+        </symbol>
+        <symbol id="i-bulb" viewBox="0 0 24 24">
+            <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" />
+        </symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24">
+            <path d="M4 20l1-4L16 5l3 3L8 19l-4 1zM14 7l3 3" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
+        </symbol>
+        <symbol id="i-send" viewBox="0 0 24 24">
+            <path d="M21 3L3 10l7 3 3 7 8-17zM10 13l11-10" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="M3 7l9 6 9-6" />
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" />
+            <circle cx="12" cy="10" r="2.5" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path d="M3 12h18M15 6l6 6-6 6" />
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 24 24">
+            <path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="currentColor" stroke="none" />
+        </symbol>
+    </svg>
+
+    <div class="wrap">
+        <div class="top">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Sleek GAGAN Monochrome Logo.png" alt="Gagan Reddy" class="profile-photo">
+                </a>
+            </div>
+            <div>No tree can grow to heaven, unless its root reach down to hell <svg class="i red">
+                    <use href="#i-star" />
+                </svg></div>
+                <div><a href="about.html">About</a></div>
+        </div>
+
+
+        <header class="hero">
+            <div class="bigword" aria-hidden="true">GAGAN REDDY</div>
+
+            <div class="intro">
+                <p class="hello" style="--i:0">Hello, I’m</p>
+                <h1 style="--i:1">Gagan<br>Reddy</h1>
+                <p class="role" style="--i:2">Full-Stack Developer &amp;<br>Problem Solver</p>
+                <p class="bio" style="--i:3">Hi, I’m Gagan Reddy, a passionate Computer Science student and aspiring Full-Stack Developer focused on building modern web applications and AI-powered solutions. I enjoy turning ideas into real-world projects using the MERN stack, JavaScript, Python, and emerging AI technologies.</p>
+                <!-- <p class="avail" style="--i:4"><svg class="i">
+                        <use href="#i-globe" />
+                    </svg>Available in Bengaluru &amp; remote</p> -->
+                    <a class="theme-btn" href="#" download>RESUME</a>
+            </div>
+
+
+            <div class="photo"><img src="myphoto.png" alt="Portrait of Your Name" onerror="this.remove()"></div>
+
+            <aside class="side">
+                <div class="tagline"><svg class="i">
+                        <use href="#i-star" />
+                    </svg>Turning ideas into powerful digital experiences.</div>
+                <ul class="stats">
+                    <li><b data-count="5" data-suffix="+">5+</b><span>Projects<br>built</span></li>
+                    <li><b data-count="2" data-suffix="+">2+</b><span>Years<br>learning</span></li>
+                    <li><b data-count="100" data-suffix="+">100+</b><span>DSA problems<br>solved</span></li>
+                </ul>
+            </aside>
+        </header>
+    </div>
+
+    <main>
+
+
+
+<section class="block about-section" id="about">
+    <div class="wrap about-content">
+
+        <div class="about-heading reveal">
+            <p class="about-label">GET TO KNOW ME</p>
+            <h2>About Me<span>.</span></h2>
+        </div>
+
+        <div class="about-text reveal" style="--i:1">
+            <p>
+               I’m <strong>Gagan Reddy</strong> , a passionate Computer Applications student and technology enthusiast interested in software development, artificial intelligence, and emerging technologies. I enjoy combining creativity and logical thinking to explore new ideas, solve real-world problems, and build innovative digital solutions. I’m continuously expanding my technical knowledge, experimenting with new technologies, and developing the skills needed to create meaningful and impactful products.
+            </p>
+
+            <a href="#contact" class="cta">
+                Let's Connect
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+        <section class="block">
+            <div class="wrap">
+                <div class="headrow reveal">
+                    <h2>Selected projects</h2><a href="https://github.com/Gaganreddy20">View all projects <svg
+                            class="i">
+                            <use href="#i-arrow" />
+                        </svg></a>
+                </div>
+                <div class="projects">
+
+                    <a class="proj reveal" style="--i:0" href="https://your-demo-link.com" target="_blank"
+                        rel="noopener">
+                        <div class="thumb" data-title="Project One"><img src="project1.jpg" alt=""
+                                onerror="this.remove()"></div>
+                        <div class="meta"><em>01</em>
+                            <div>Project One<small>E-commerce app</small></div><svg class="i">
+                                <use href="#i-arrow" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a class="proj reveal" style="--i:1" href="https://your-demo-link.com" target="_blank"
+                        rel="noopener">
+                        <div class="thumb" data-title="Project Two"><img src="project2.jpg" alt=""
+                                onerror="this.remove()"></div>
+                        <div class="meta"><em>02</em>
+                            <div>Project Two<small>Coaching website</small></div><svg class="i">
+                                <use href="#i-arrow" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a class="proj reveal" style="--i:2" href="https://your-demo-link.com" target="_blank"
+                        rel="noopener">
+                        <div class="thumb" data-title="Project Three"><img src="project3.jpg" alt=""
+                                onerror="this.remove()"></div>
+                        <div class="meta"><em>03</em>
+                            <div>Project Three<small>Automation tool</small></div><svg class="i">
+                                <use href="#i-arrow" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="wrap">
+            <section class="trio">
+                <div class="reveal">
+                    <h2>Education &amp; skills</h2>
+                    <h3>Education</h3>
+                    <ul class="edu">
+                        <li>
+                            <div>BCA (Computer Applications)<small>Your College Name</small></div><time>2024 –
+                                2027</time>
+                        </li>
+                        <li>
+                            <div>Certification or course<small>Platform / Institute</small></div><time>2026</time>
+                        </li>
+                    </ul>
+                    <h3>Skills</h3>
+                    <ul class="tags">
+                        <li>HTML / CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>SQL</li>
+                        <li>Git</li>
+                        <li>REST APIs</li>
+                        <li>DSA</li>
+                    </ul>
+                </div>
+
+                <div class="reveal" style="--i:1">
+                    <h2>How I work</h2>
+                    <ol class="steps">
+                        <li><em>01</em><span class="ic"><svg class="i">
+                                    <use href="#i-search" />
+                                </svg></span>
+                            <div><b>Understand</b>
+                                <p>Read the requirements and know the user.</p>
+                            </div>
+                        </li>
+                        <li><em>02</em><span class="ic"><svg class="i">
+                                    <use href="#i-bulb" />
+                                </svg></span>
+                            <div><b>Plan</b>
+                                <p>Sketch the pages, data and API first.</p>
+                            </div>
+                        </li>
+                        <li><em>03</em><span class="ic"><svg class="i">
+                                    <use href="#i-pen" />
+                                </svg></span>
+                            <div><b>Design</b>
+                                <p>Clean, simple and easy-to-use layouts.</p>
+                            </div>
+                        </li>
+                        <li><em>04</em><span class="ic"><svg class="i">
+                                    <use href="#i-code" />
+                                </svg></span>
+                            <div><b>Build</b>
+                                <p>Write readable, tested and responsive code.</p>
+                            </div>
+                        </li>
+                        <li><em>05</em><span class="ic"><svg class="i">
+                                    <use href="#i-send" />
+                                </svg></span>
+                            <div><b>Ship</b>
+                                <p>Deploy, test on real devices and improve.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="quote reveal" style="--i:2">
+                    <span aria-hidden="true">“</span>
+                    <p>Good software is not just how it runs, but how it feels.</p>
+                    <div class="sig">Gagan Reddy</div>
+                    <small>Let’s build something great together.</small>
+                </div>
+            </section>
+        </div>
+
+
+
+        
+<section class="block contact-section" id="contact">
+  <div class="wrap contact-layout">
+
+    
+    <div class="contact-info reveal">
+      <div class="contact-item">
+        <span class="contact-icon">⌖</span>
+        <h3>LOCATION</h3>
+        <p>Bagepalli, Karnataka, India</p>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-icon">✉</span>
+        <h3>EMAIL ME</h3>
+        <a href="mailto:gaganreddy.works@gmail.com">
+          gaganreddy.works@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <h3>SOCIALS</h3>
+        <div class="contact-socials">
+          <a href="https://github.com/Gaganreddy20"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <form class="contact-form reveal"
+          action="https://formspree.io/f/xqpppnob"
+          method="POST">
+
+      <input type="hidden" name="_subject"
+             value="New Portfolio Contact Message">
+      <input type="hidden" name="_captcha" value="true">
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fullName">FULL NAME</label>
+          <input id="fullName" type="text" name="name"
+                 placeholder="Your full name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="email">EMAIL ADDRESS</label>
+          <input id="email" type="email" name="email"
+                 placeholder="Your email address" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="subject">SUBJECT</label>
+        <input id="subject" type="text" name="subject"
+               placeholder="What would you like to discuss?" required>
+      </div>
+
+      <div class="form-field">
+        <label for="message">YOUR MESSAGE</label>
+        <textarea id="message" name="message"
+                  placeholder="Write your message..."
+                  rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-submit">
+        Send Message <span>↗</span>
+      </button>
+    </form>
+
+  </div>
+</section>
+
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-top">
+                        <p>Wanna-work-together?</p>
+                        <h2>
+                            <a href="gaganreddy.works@gmail.com">H i r e M E !</a>
+                        </h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap">&copy; <span id="year"></span> Gagan Reddy. All rights reserved.</div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+
+        document.querySelectorAll('[data-count]').forEach(el => {
+            const end = +el.dataset.count, suffix = el.dataset.suffix || '';
+            if (calm) return;
+            el.textContent = '0' + suffix;
+            const start = performance.now() + 900;
+            const tick = t => {
+                const p = Math.min(Math.max((t - start) / 1400, 0), 1);
+                el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        });
+
+
+        
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  const progressPath = document.getElementById("progressPath");
+
+  if (scrollBtn && progressPath) {
+    const circumference = progressPath.getTotalLength();
+
+    progressPath.style.strokeDasharray = circumference;
+    progressPath.style.strokeDashoffset = circumference;
+
+    function updateScrollProgress() {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const scrollTop = window.scrollY;
+
+      scrollBtn.classList.toggle("visible", window.scrollY > 150);
+
+      const progress = scrollableHeight > 0
+        ? scrollTop / scrollableHeight
+        : 0;
+
+      progressPath.style.strokeDashoffset =
+        circumference * (1 - progress);
+    }
+
+    window.addEventListener("scroll", updateScrollProgress, {
+      passive: true
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    updateScrollProgress();
+  }
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+<div class="contact-box">
+    <h2>Get In Touch</h2>
+    <p>Have a project in mind or want to collaborate?
+       Send me a message!</p>
+
+    <form id="contactForm">
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        autocomplete="name"
+        required
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        autocomplete="email"
+        required
+      />
+
+      <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required
+      />
+
+      <textarea
+        name="message"
+        placeholder="Write your message here..."
+        rows="5"
+        required
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="formStatus" aria-live="polite"></p>
+    </form>
+  </div> -->
